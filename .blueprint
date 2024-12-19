@@ -1,0 +1,22 @@
+created:
+    - database/factories/CategoryFactory.php
+    - database/factories/ProductFactory.php
+    - database/factories/CartFactory.php
+    - database/factories/ProductTransactionFactory.php
+    - database/factories/TransactionDetailFactory.php
+    - database/migrations/2024_12_19_122248_create_categories_table.php
+    - database/migrations/2024_12_19_122249_create_products_table.php
+    - database/migrations/2024_12_19_122250_create_carts_table.php
+    - database/migrations/2024_12_19_122251_create_product_transactions_table.php
+    - database/migrations/2024_12_19_122252_create_transaction_details_table.php
+    - app/Models/Category.php
+    - app/Models/Product.php
+    - app/Models/Cart.php
+    - app/Models/ProductTransaction.php
+    - app/Models/TransactionDetail.php
+models:
+    Category: { name: 'string:100', slug: 'string:120', icon: 'string:255', relationships: { hasMany: Product } }
+    Product: { category_id: 'id foreign', name: 'string:255', slug: 'sstring:255', price: integer, about: text, relationships: { hasMany: 'ProductTransaction, Cart, TransactionDetail' } }
+    Cart: { user_id: 'id foreign', product_id: 'id foreign', qty: integer }
+    ProductTransaction: { user_id: 'id foreign', total_amount: integer, is_paid: boolean, address: text, city: 'string:100', post_code: 'string:100', phone_number: 'string:16', notes: text, proof: text, relationships: { hasMany: TransactionDetail } }
+    TransactionDetail: { Production_transaction_id: 'id foreign', product_id: 'id foreign', price: integer }

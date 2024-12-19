@@ -1,0 +1,41 @@
+models:
+  Category:
+    name: string:100
+    slug: string:120
+    icon: string:255
+    relationships:
+      hasMany: Product
+
+  Product:
+    category_id: id foreign
+    name: string:255
+    slug: sstring:255
+    price: integer
+    about: text
+    relationships:
+      hasMany: ProductTransaction, Cart, TransactionDetail
+
+  Cart:
+    user_id: id foreign
+    product_id: id foreign
+    qty: integer
+
+  ProductTransaction:
+    user_id: id foreign
+    total_amount: integer
+    is_paid: boolean
+    address: text
+    city: string:100
+    post_code: string:100
+    phone_number: string:16
+    notes: text
+    proof: text
+    relationships:
+      hasMany: TransactionDetail
+
+  TransactionDetail:
+    Production_transaction_id: id foreign
+    product_id: id foreign
+    price: integer
+
+
