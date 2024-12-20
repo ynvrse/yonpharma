@@ -17,13 +17,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDeleteCascade();
             $table->integer('total_amount');
-            $table->boolean('is_paid');
+            $table->boolean('is_paid')->default(false);
             $table->text('address');
             $table->string('city', 100);
             $table->string('post_code', 100);
             $table->string('phone_number', 16);
-            $table->text('notes');
-            $table->text('proof');
+            $table->text('notes')->nullable();
+            $table->text('proof')->nullable();
             $table->timestamps();
         });
 

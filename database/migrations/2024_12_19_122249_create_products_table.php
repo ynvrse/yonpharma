@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name', 255);
             $table->string('slug');
             $table->integer('price');
-            $table->text('about');
+            $table->text('about')->nullable();
             $table->timestamps();
         });
 

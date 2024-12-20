@@ -31,7 +31,7 @@
       enable = true;
       previews = {
         web = {
-          command = ["php" "artisan" "serve" "--port" "$PORT" "--host" "0.0.0.0"];
+          command = ["php" "artisan" "serve" "--port" "9005" "--host" "0.0.0.0"];
           manager = "web";
         };
       };

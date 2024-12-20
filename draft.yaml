@@ -14,12 +14,7 @@ models:
     about: text
     relationships:
       hasMany: ProductTransaction, Cart, TransactionDetail
-
-  Cart:
-    user_id: id foreign
-    product_id: id foreign
-    qty: integer
-
+  
   ProductTransaction:
     user_id: id foreign
     total_amount: integer
@@ -37,5 +32,12 @@ models:
     Production_transaction_id: id foreign
     product_id: id foreign
     price: integer
+
+  Cart:
+    user_id: id foreign
+    product_id: id foreign
+    qty: integer
+
+  
 
 

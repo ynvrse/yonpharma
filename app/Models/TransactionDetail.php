@@ -16,7 +16,7 @@ class TransactionDetail extends Model
      * @var array
      */
     protected $fillable = [
-        'Production_transaction_id',
+        'Product_transaction_id',
         'product_id',
         'price',
     ];
@@ -28,17 +28,20 @@ class TransactionDetail extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'Production_transaction_id' => 'integer',
+        'product_transaction_id' => 'integer',
         'product_id' => 'integer',
     ];
 
-    public function productionTransaction(): BelongsTo
+    public function productTransaction(): BelongsTo
     {
-        return $this->belongsTo(ProductionTransaction::class);
+        return $this->belongsTo(ProductTransaction::class, 'product_transaction_id');
     }
 
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }
+
+
+
 }
