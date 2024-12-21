@@ -17,7 +17,7 @@ $login = function () {
 
     Session::regenerate();
 
-    $this->redirectIntended(default: route('/', absolute: false), navigate: true);
+    $this->redirect('/');
 };
 
 ?>

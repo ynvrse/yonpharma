@@ -13,17 +13,17 @@ $latestProducts = computed(fn()=> Product::select('name','slug','price','photo')
 				<!-- Panadomal -->
 
 				@forelse($this->latestProducts as $product)
-				<div class="rounded-2xl bg-white py-3.5 pl-4 pr-[22px] inline-flex flex-col gap-4 items-start mr-4 relative w-[158px]">
+				<a href="/detail-product/{{$product->slug}}"  class="rounded-2xl bg-white py-3.5 pl-4 pr-[22px] inline-flex flex-col gap-4 items-start mr-4 relative w-[158px]">
 					<img src="{{asset($product->photo)}}" class="h-[100px] w-full object-contain" alt="">
 					<div>
-						<a href="/detail-product/{{$product->slug}}" wire:navigate class="text-base font-semibold w-[120px] truncate stretched-link block">
+						<div  class="text-base font-semibold w-[120px] truncate stretched-link block">
 							{{$product->name}}
-						</a>
+						</div>
 						<p class="text-sm truncate text-grey">
 							Rp {{$product->price}}
 						</p>
 					</div>
-				</div>
+				</a>
 				@empty
 				<p>Prodct Tidak Tersedia</p>
 				@endforelse

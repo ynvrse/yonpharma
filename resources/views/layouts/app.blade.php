@@ -16,8 +16,14 @@
 		<!-- Topbar -->
 		<livewire:layout.top-bar/>
 
+@php
+$isNotDetailProductPage = request()->is('detail-product/*') ? false : true;
+@endphp
+
 		<!-- Floating navigation -->
+		@if($isNotDetailProductPage)
          <livewire:layout.navigation-floating />
+		@endif
 		
 		<!-- Header -->
         <livewire:layout.header/>

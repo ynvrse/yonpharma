@@ -32,7 +32,7 @@ class UserRolePermissionSeeder extends Seeder
 
         $buyerAccount = User::create([
             'name' => 'Nisrina Sausan',
-            'email' => 'buyer@yonpharma.test',
+            'email' => 'nisrina@yonpharma.test',
             'password' => bcrypt('123123123'),
             'avatar' => 'img/avatar/avatar.svg',
         ]);
