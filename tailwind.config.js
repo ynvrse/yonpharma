@@ -10,12 +10,24 @@ export default {
     ],
 
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+        fontFamily: {
+          poppins: "Poppins, sans-serif",
         },
-    },
-
+        extend: {
+          colors: {
+            'primary': '#FD915A',
+            'secondary': '#F7F1F0',
+            'black': '#121212',
+            'grey': '#ADAAB4',
+            'lilac': '#E6D3F8',
+          },
+        },
+      },
     plugins: [forms],
 };
+
+
+
+
+
+  
