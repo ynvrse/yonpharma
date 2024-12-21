@@ -9,8 +9,9 @@ models:
   Product:
     category_id: id foreign
     name: string:255
-    slug: sstring:255
+    slug: string:255
     price: integer
+    photo: string:255
     about: text
     relationships:
       hasMany: ProductTransaction, Cart, TransactionDetail

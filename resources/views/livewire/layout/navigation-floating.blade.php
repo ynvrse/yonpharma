@@ -2,6 +2,8 @@
 
 use App\Livewire\Actions\Logout;
 
+
+
 $logout = function (Logout $logout) {
     $logout();
 
@@ -10,7 +12,7 @@ $logout = function (Logout $logout) {
 
 ?>
 
-<nav class="fixed z-50 bottom-[30px] bg-gray-800 rounded-[50px] pt-[18px] px-10 left-1/2 -translate-x-1/2 w-80">
+<nav class="fixed z-50 bottom-[30px] bg-lilac shadow-xl rounded-[50px] pt-[18px] px-10 left-1/2 -translate-x-1/2 w-80">
 			<div class="flex items-center justify-center gap-5 flex-nowrap">
 				<a href="#" class="flex flex-col items-center justify-center gap-1 px-1 group is-active">
                     <div class="filter-to-grey  group-[.is-active]:filter-to-primary">

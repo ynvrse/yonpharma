@@ -27,10 +27,19 @@ class UserRolePermissionSeeder extends Seeder
             'name' => 'Dion Firmansyah',
             'email' => 'owner@yonpharma.test',
             'password' => bcrypt('123123123'),
+            'avatar' => 'img/avatar/avatar.svg',
+        ]);
+
+        $buyerAccount = User::create([
+            'name' => 'Nisrina Sausan',
+            'email' => 'buyer@yonpharma.test',
+            'password' => bcrypt('123123123'),
+            'avatar' => 'img/avatar/avatar.svg',
         ]);
 
         $ownerAccount->assignRole($ownerRole);
 
+        $buyerAccount->assignRole($buyerRole);
 
     }
 }

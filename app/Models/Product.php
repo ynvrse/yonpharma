@@ -23,6 +23,7 @@ class Product extends Model
         'slug',
         'price',
         'about',
+        'photo',
     ];
 
     /**

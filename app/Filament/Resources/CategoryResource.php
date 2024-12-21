@@ -42,7 +42,7 @@ class CategoryResource extends Resource
                     ->image()
                     ->imageEditor()
                     ->imageEditorAspectRatios(['1:1'])
-                    ->directory('icon-category')
+                    ->directory('img/category')
                     ->columnSpanFull(),
             ]);
     }
@@ -70,7 +70,10 @@ class CategoryResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
+
                 Tables\Actions\EditAction::make(),
+
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([

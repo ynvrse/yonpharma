@@ -1,3 +1,8 @@
+<?php
+use function Livewire\Volt\{state};
+use Illuminate\Support\Facades\Auth;
+
+?>
 <section class="flex items-center justify-between gap-5 wrapper">
     <div class="flex items-center gap-3">
 				<div class="bg-white rounded-full p-[5px] flex justify-center items-center">
@@ -5,10 +10,12 @@
 				</div>
 				<div class="">
 					<p class="text-base font-semibold capitalize text-primary">
-						Nisrina
+						{{Auth::user()->name }}
 					</p>
 					<p class="text-sm">
+						@role('buyer')
 						Customer
+						@endrole
 					</p>
 				</div>
 			</div>

@@ -12,86 +12,10 @@
 		</section>
 
 		<!-- Categories -->
-		<section class="wrapper !px-0 flex flex-col gap-2.5">
-			<p class="px-4 text-base font-bold">
-				Categories
-			</p>
-			<div id="categoriesSlider" class="relative">
-				<!-- Diabetes -->
-				<div class="inline-flex gap-2.5 items-center py-3 px-3.5 relative bg-white rounded-xl mr-4">
-					<img src="{{asset('assets/svgs/ic-diabetes-filled.svg')}}" class="size-10" alt="">
-					<a href="#" class="text-base font-semibold truncate stretched-link">
-						Diabetes
-					</a>
-				</div>
-				<!-- Fitness -->
-				<div class="inline-flex gap-2.5 items-center py-3 px-3.5 relative bg-white rounded-xl mr-4">
-					<img src="{{asset('assets/svgs/ic-fitness-filled.svg')}}" class="size-10" alt="">
-					<a href="#" class="text-base font-semibold truncate stretched-link">
-						Fitness
-					</a>
-				</div>
-				<!-- Vitamins -->
-				<div class="inline-flex gap-2.5 items-center py-3 px-3.5 relative bg-white rounded-xl mr-4">
-					<img src="{{asset('assets/svgs/ic-vitamins-filled.svg')}}" class="size-10" alt="">
-					<a href="#" class="text-base font-semibold truncate stretched-link">
-						Vitamins
-					</a>
-				</div>
-				<!-- Surgicals -->
-				<div class="inline-flex gap-2.5 items-center py-3 px-3.5 relative bg-white rounded-xl mr-4">
-					<img src="{{asset('assets/svgs/ic-surgicals-filled.svg')}}" class="size-10" alt="">
-					<a href="#" class="text-base font-semibold truncate stretched-link">
-						Surgicals
-					</a>
-				</div>
-			</div>
-		</section>
+		<livewire:front._categories />
 
 		<!-- Latest Products -->
-		<section class="wrapper !px-0 flex flex-col gap-2.5">
-			<p class="px-4 text-base font-bold">
-				Latest Products
-			</p>
-			<div id="proudctsSlider" class="relative">
-				<!-- Panadomal -->
-				<div class="rounded-2xl bg-white py-3.5 pl-4 pr-[22px] inline-flex flex-col gap-4 items-start mr-4 relative w-[158px]">
-					<img src="{{asset('assets/images/product-1.webp')}}" class="h-[100px] w-full object-contain" alt="">
-					<div>
-						<a href="details.html" class="text-base font-semibold w-[120px] truncate stretched-link block">
-							Panadomal
-						</a>
-						<p class="text-sm truncate text-grey">
-							Rp 56000
-						</p>
-					</div>
-				</div>
-				<!-- Softovac Rami -->
-				<div class="rounded-2xl bg-white py-3.5 pl-4 pr-[22px] inline-flex flex-col gap-4 items-start mr-4 relative w-[158px]">
-					<img src="{{asset('assets/images/product-4.webp')}}" class="h-[100px] w-full object-contain" alt="">
-					<div>
-						<a href="details.html" class="text-base font-semibold w-[120px] truncate stretched-link block">
-							Softovac Rami
-						</a>
-						<p class="text-sm truncate text-grey">
-							Rp 290000
-						</p>
-					</div>
-				</div>
-				<!-- Softovac Rami -->
-				<div class="rounded-2xl bg-white py-3.5 pl-4 pr-[22px] inline-flex flex-col gap-4 items-start mr-4 relative w-[158px]">
-					<img src="{{asset('assets/images/product-2.webp')}}" class="h-[100px] w-full object-contain" alt="">
-					<div>
-						<a href="details.html" class="text-base font-semibold w-[120px] truncate stretched-link block">
-							Softovac Rami
-						</a>
-						<p class="text-sm truncate text-grey">
-							Rp 290000
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
+		<livewire:front._latest-product />
 
 		<!-- Explore -->
 		<section class="wrapper px-4 mb-4">
